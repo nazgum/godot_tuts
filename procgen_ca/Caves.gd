@@ -17,7 +17,7 @@ var caves = []
 
 
 func _ready():
-	pass
+	generate()
 
 
 
