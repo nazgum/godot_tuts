@@ -34,7 +34,7 @@ func generate():
 	create_leaf(0)   # Create Tree
 	create_rooms()   # Create rooms in the leaf leaves of the tree
 	join_rooms()     # Ensure all rooms connected
-	#clear_deadends() # Remove deadend corridors
+	clear_deadends() # Remove deadend corridors
 
 
 # start by filling the map with roof tiles
