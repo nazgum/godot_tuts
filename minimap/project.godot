@@ -14,17 +14,21 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Procgen CA"
+config/name="Minimap"
 run/main_scene="res://Main.tscn"
-config/icon="res://icon.png"
+config/icon="res://Assets/player.png"
 
 [autoload]
 
 Util="*res://Util.gd"
 
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/test_width=960
+window/size/test_height=540
+
 [rendering]
 
-2d/snapping/use_gpu_pixel_snap=true
-environment/default_clear_color=Color( 0.27451, 0.0156863, 0.301961, 1 )
 environment/default_environment="res://default_env.tres"
-quality/2d/use_pixel_snap=true
