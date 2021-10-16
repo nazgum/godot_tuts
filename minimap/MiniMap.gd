@@ -1,9 +1,8 @@
 extends Node2D
 
-var player
-var caves
-
-onready var dot = $Dot
+onready var dot    = $Dot
+onready var caves  = get_node("/root/Main/Caves")
+onready var player = get_node("/root/Main/Player")
 
 enum Tiles { GROUND, ROOF, FOG }
 
@@ -13,9 +12,6 @@ func _ready():
 
 
 func generate():
-	caves = get_node("/root/Main/Caves")
-	player = get_node("/root/Main/Player")
-
 	# add starting tiles to minimap
 	for cell in caves.get_used_cells():
 		var tile = caves.get_cellv(cell)
@@ -36,8 +32,9 @@ func generate():
 
 
 # move the player in the minimap
+# minimap is 8x smaller, 32/4 = 8
 func _process(delta):
-	dot.position = player.position/8  # minimap is 8x smaller, 32/4 = 8
+	dot.position = player.position/8
 
 
 # update the fog of war
