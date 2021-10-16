@@ -8,7 +8,7 @@ onready var dot = $Dot
 enum Tiles { GROUND, ROOF, FOG }
 
 func _ready():
-	$FogTimer.connect("timeout", self, "clear_fog")
+	$FogTimer.connect("timeout", self, "update_fog")
 	generate()
 
 
@@ -41,7 +41,7 @@ func _process(delta):
 
 
 # update the fog of war
-func clear_fog():
+func update_fog():
 	var player_pos = caves.world_to_map(player.position)
 
 	# how far players can see in fog
