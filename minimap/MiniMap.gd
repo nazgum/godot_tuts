@@ -3,8 +3,7 @@ extends Node2D
 var player
 var caves
 
-onready var main   = get_node("/root/Main")
-onready var dot    = $Dot
+onready var dot = $Dot
 
 enum Tiles { GROUND, ROOF, FOG }
 
