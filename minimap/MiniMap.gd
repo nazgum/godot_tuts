@@ -37,7 +37,7 @@ func generate():
 
 # move the player in the minimap
 func _process(delta):
-	dot.position = player.position/8  # minimap is 8x smaller, 32/8 = 4
+	dot.position = player.position/8  # minimap is 8x smaller, 32/4 = 8
 
 
 # update the fog of war
